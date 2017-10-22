@@ -4,6 +4,7 @@ class Carga{
   float posicionX;
   float posicionY;
   float fuerza;
+  PVector direccionFuerza;
   float velocidad;
   
   public Carga(float masa, float carga, float posicionX, float posicionY){
@@ -50,6 +51,14 @@ class Carga{
   
   public void setFuerza(float fuerza){
     this.fuerza = fuerza;
+  }
+  
+  public PVector getDireccionFuerza(){
+    return direccionFuerza;
+  }
+  
+  public void setDireccionFuerza(PVector direccionFuerza){
+    this.direccionFuerza = direccionFuerza;
   }
   
   public float getVelocidad(){
