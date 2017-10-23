@@ -20,7 +20,7 @@ class MotorFisico{
              double fuerza=(k*cargas.get(i).getCarga()*cargas.get(j).getCarga())/distanciaNeta;
              //double fuerzaX=fuerza*cargas.get(i).getDireccionFuerza().x;
              //double fuerzaY=fuerza*cargas.get(j).getDireccionFuerza().y;
-             if((cargas.get(i).getCarga()>0)&&(cargas.get(j).getCarga()>0)){
+             if(((cargas.get(i).getCarga()>0)&&(cargas.get(j).getCarga()>0))||(cargas.get(i).getCarga()<0)&&(cargas.get(j).getCarga()<0)){
                    acumFuerza+=fuerza;
              }
              else if(((cargas.get(i).getCarga()<0)&&(cargas.get(j).getCarga()>0))||(cargas.get(i).getCarga()>0)&&(cargas.get(j).getCarga()<0)){
