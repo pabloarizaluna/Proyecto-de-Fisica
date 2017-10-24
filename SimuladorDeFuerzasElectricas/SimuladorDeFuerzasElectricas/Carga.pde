@@ -3,15 +3,17 @@ class Carga{
   float masa;
   float posicionX;
   float posicionY;
-  float fuerza;
-  PVector direccionFuerza;
-  float velocidad;
+  PVector fuerza;
+  PVector velocidad;
   
   public Carga(float masa, float carga, float posicionX, float posicionY){
   this.masa = masa;
   this.carga = carga;
   this.posicionX = posicionX;
   this.posicionY = posicionY;
+  this.velocidad.x=0;
+  this.velocidad.y=0;
+  
 }
   public float getCarga(){
     return carga;
@@ -45,28 +47,22 @@ class Carga{
     this.posicionY = posicionY;
   }
   
-  public float getFuerza(){
+  public PVector getFuerza(){
     return fuerza;
   }
   
-  public void setFuerza(float fuerza){
+  public void setFuerza(PVector fuerza){
     this.fuerza = fuerza;
   }
   
-  public PVector getDireccionFuerza(){
-    return direccionFuerza;
-  }
+
   
-  public void setDireccionFuerza(PVector direccionFuerza){
-    this.direccionFuerza = direccionFuerza;
-  }
-  
-  public float getVelocidad(){
+  public PVector getVelocidad(){
     return velocidad;
   }
   
-  public void setVelocidad(float velocidad){
+  public void setVelocidad(PVector velocidad){
     this.velocidad = velocidad;
   }
-  
+
 }
