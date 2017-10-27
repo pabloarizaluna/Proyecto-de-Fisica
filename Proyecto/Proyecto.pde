@@ -12,18 +12,6 @@ void setup()
   Fisica.init(this);
   world = new FWorld();
   world.setGravity(0, 0);
-  aux = new Carga(1.6*pow(10, -19), 1.6*pow(10, -27), new PVector(360, 300));
-  cargas.add(aux);
-  world.add(aux.circulo);
-  aux = new Carga(-1.6*pow(10, -19), 9.1*pow(10, -31), new PVector(430, 300));
-  cargas.add(aux);
-  world.add(aux.circulo);
-  aux = new Carga(1.6*pow(10, -19), 1.6*pow(10, -27), new PVector(395, 349));
-  cargas.add(aux);
-  world.add(aux.circulo);
-  aux = new Carga(-1.6*pow(10, -19), 9.1*pow(10, -31), new PVector(395, 251));
-  cargas.add(aux);
-  world.add(aux.circulo);
 }
 
 void draw() {
@@ -47,7 +35,7 @@ void mousePressed()
     world.add(aux.circulo);
     band = false;
   } 
-  if(mouseButton == RIGHT)
+  if (mouseButton == RIGHT)
   {
     aux = new Carga(1.6*pow(10, -19), 9.1*pow(10, -31), new PVector(mouseX, mouseY));
     cargas.add(aux);
