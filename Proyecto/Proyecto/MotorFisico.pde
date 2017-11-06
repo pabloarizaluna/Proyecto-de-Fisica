@@ -1,3 +1,4 @@
+
 static abstract class MotorFisico {
   static public void calcularFuerza(ArrayList<Carga> cargas)
   {
