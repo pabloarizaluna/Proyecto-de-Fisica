@@ -18,8 +18,8 @@ static abstract class MotorFisico {
           unitario.normalize();
           if (carga.carga < 0 && aux.carga < 0 || carga.carga > 0 && aux.carga > 0)
             unitario.mult(-1);
-          if (PVector.dist(carga.posicion, aux.posicion) < 8*pow(10, -2))
-            unitario.mult(-50);
+          if (PVector.dist(carga.posicion, aux.posicion) < 25)
+            unitario.mult(-10);
           fuerzaNeta.add(unitario.mult(fuerza));
         }
       }

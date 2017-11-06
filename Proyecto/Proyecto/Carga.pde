@@ -19,9 +19,9 @@ class Carga
     this.fuerza = new PVector(0, 0);
     this.velocidad = new PVector(0, 0);
     if(carga < 0)
-      circulo.setFill(0, 0, 255);
+      circulo.setFill(random(0, 255), random(0, 255), 255);
     else
-      circulo.setFill(255, 0, 0);
+      circulo.setFill(255, random(0, 255), random(0, 255));
   }
 
   public void actualizarVelocidad()
