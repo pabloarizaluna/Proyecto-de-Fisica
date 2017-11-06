@@ -1,10 +1,13 @@
 class Cp5Control {
   ControlP5 cp5;
   Textarea myTextarea;
+  Textlabel datosCarga;
   String textC;
   String textM;
+  
   ControlFont font2D = new ControlFont(createFont("Arial", 30));
-
+  ControlFont font2D_20 = new ControlFont(createFont("Arial", 20));
+  ControlFont font2D_10 = new ControlFont(createFont("Arial", 15));
   Cp5Control(ControlP5 control) {
     cp5 = control;
   }
@@ -38,7 +41,19 @@ class Cp5Control {
       .setColorBackground(color(0,255,0))
       .setColorBackground(color(0,255,0))
       ;
- 
+    cp5.addLabel("Deslice el mouse sobre una")
+      .setFont(font2D_20)
+      .setPosition(20, 300)
+      .show();
+    cp5.addLabel("carga para ver sus datos")
+      .setFont(font2D_20)
+      .setPosition(20, 320)
+      .show();
+    datosCarga = cp5.addLabel("")
+      .setFont(font2D_10)
+      .setPosition(20, 350)
+      .show();
+      
     cp5.end();
   }
   void mostrarInicio() {
@@ -66,7 +81,9 @@ class Cp5Control {
     
     return textM;
   }
-
+  public void setDatosCarga(String texto){
+    datosCarga.setText(texto);
+  }
   public void controlEvent(ControlEvent theEvent) {
     println(theEvent.getController().getName());
   }

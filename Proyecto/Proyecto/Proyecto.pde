@@ -37,7 +37,12 @@ void draw() {
   for (Carga carga : cargas)
   {
     carga.actualizarVelocidad();
+    //println(carga.posicion);
+    if((mouseX>carga.posicion.x && mouseX<carga.posicion.x+10) && (mouseY>carga.posicion.y-10 && mouseY<carga.posicion.y+10)){
+      grafico.cp5.setDatosCarga("Q:"+carga.carga+"\nM:"+carga.masa+"\nV:"+carga.velocidad.x+"i+"+carga.velocidad.y+"j\nF:"+carga.fuerza.x+"i+"+carga.fuerza.y+"j");
+    }
   }
+  //println (mouseX +"," + mouseY);
 }
 
 
